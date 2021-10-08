@@ -1,9 +1,12 @@
 # Checks for duplicates in a list
-a = [1, 2, 3, 4, 4, 5, 6]
 
+# Option 1
 def dupe_check(x):
     return len(x) != len(set(x))
 
 
-print(dupe_check(a))
+lst_one = [1, 2, 3, 4, 5]
+lst_two = [1, 2, 3, 4, 4, 5, 6]
 
+print(dupe_check(lst_one))  # False (no duplicates)
+print(dupe_check(lst_two))  # True - has duplicates
