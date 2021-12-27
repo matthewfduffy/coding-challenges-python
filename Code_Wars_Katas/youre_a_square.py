@@ -21,3 +21,20 @@
     25  --> True
     26  --> False
 """
+import math
+
+def is_square(n):
+    if n < 0:
+        return False
+    else:
+        x = str(math.sqrt(n))
+        y = x.split('.')
+        if y[1] == str(0):
+            return True
+        else: 
+            return False
+
+
+print(is_square(25))
+print(is_square(26))
+print(is_square(-1))
