@@ -13,6 +13,8 @@ Delete as many characters as possible using this method and return the resulting
 
 """
 #TODO: Refactor to account for edge cases. Current solution doesn't account for non-matching characters that are separated from the same character matching set 
+# https://programs.programmingoneonone.com/2021/04/hackerrank-super-reduced-string-solution.html
+
 from collections import Counter
 
 def superReducedString(s):
