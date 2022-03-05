@@ -1,8 +1,9 @@
-# Given an array, set negative values to zero
+# 10. Given an array, set negative values to zero
 
 # Create Array
 arr = [n for n in range(-20, 20, 5)]
 # [-20, -15, -10, -5, 0, 5, 10, 15]
+
 
 # Option 1 - without function
 index = 0

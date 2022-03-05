@@ -1,4 +1,4 @@
-# Given an array, square each value in the array
+#   8. Given an array, square each value in the array
 
 # Create Array
 arr = [n for n in range(1, 13)]

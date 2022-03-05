@@ -1,4 +1,4 @@
-# Create and return an array with odd integers from 1-255
+#   7. Create and return an array with odd integers from 1-255
 
 # Option 1:
 arr = []

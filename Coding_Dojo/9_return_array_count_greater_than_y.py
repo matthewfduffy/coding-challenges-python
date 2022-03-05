@@ -1,4 +1,4 @@
-# Given an array, return the count that is greater than Y
+#   9. Given an array, return the count that is greater than Y
 
 # Create Array
 arr = [n for n in range(1, 13)]

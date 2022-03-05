@@ -1,4 +1,4 @@
-# Given an array, print max, min, and average values
+#   11. Given an array, print max, min, and average values
 
 # Create an array
 arr = [n for n in range(1, 15, 2)]
