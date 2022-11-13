@@ -9,4 +9,4 @@ lst_one = [1, 2, 3, 4, 5]
 lst_two = [1, 2, 3, 4, 4, 5, 6]
 
 print(dupe_check(lst_one))  # False (no duplicates)
-print(dupe_check(lst_two))  # True - has duplicates
+print(dupe_check(lst_two))  # True  (has duplicates)
