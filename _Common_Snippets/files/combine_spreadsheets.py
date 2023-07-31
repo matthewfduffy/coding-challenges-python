@@ -1,4 +1,4 @@
-#
+# Takes spreadhseets from a specified folder path and combines them into a single spreadsheet
 # Change File Path
 
 path = "C:\Code"
