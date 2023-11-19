@@ -34,7 +34,8 @@ Your task is to compute how much money Rahu earned.
     Customer 6: Size 10 shoe not available
 """
 
-# Option without collections.Counter()
+# Option 1: without collections.Counter()
+
 num_shoes = int(input())
 shoe_sizes = input().split()
 num_customers = int(input())
@@ -46,4 +47,25 @@ for _ in range(num_customers):
         total_sold += int(customer_order[1])
         shoe_sizes.remove(customer_order[0])
         
+print(total_sold)
+
+
+
+# Option 2: WITH collections.Counter()
+
+from collections import Counter
+
+num_shoes = int(input())
+shoe_sizes = [int(_) for _ in input().split()]
+size_counter = Counter(shoe_sizes)
+num_customers = int(input())
+total_sold = 0
+
+for _ in range(num_customers):
+    order = input().split()
+    size, price = int(order[0]), int(order[1])
+    if size_counter[size] > 0:
+        total_sold += price
+        size_counter[size] -= 1
+
 print(total_sold)
