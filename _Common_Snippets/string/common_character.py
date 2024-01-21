@@ -1,6 +1,5 @@
+""" Takes two strings as input and returns a count of non-unique characters """
 def commonCharacterCount(string1, string2):
-    """ Takes two strings as input and returns a count of non-unique characters """
-
 	temp = list(string2)
 	count = 0
 
@@ -9,8 +8,10 @@ def commonCharacterCount(string1, string2):
 			temp.remove(char)
 			count += 1
 
-	print(count)
+	return count
 
+
+print(commonCharacterCount("ABCDCDC", "CDC"))
 # Original
 # def commonCharacterCount(string1, string2):
 # 	count = 0
