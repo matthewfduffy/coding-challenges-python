@@ -7,11 +7,40 @@
 
 import re
 
-def count_substring(string, sub_string):
-    pattern = "[" + sub_string + "]"
-    print(pattern)
-    x = re.findall(pattern, string)
-    print(x)
+def count_substring(string1, sub_string1):
+    string_lst = list(string1)
+    sub_string_lst = list(sub_string1)
+    condition = len(string1)
+    counter = 0
+    x = 0
+    y = 0
+
+    while condition >= len(sub_string1):
+        if sub_string_lst[x] != string_lst[y]:
+            condition = condition - 1
+            y += 1
+        else:
+            condition = condition - 1
+            x += 1
+            y += 1
+        counter += 1
+        # print (counter, sub_string_lst[x], string_lst[y])
+    return counter
+
+
+
+
+    # pattern = "[" + sub_string + "]"
+    # # print(pattern)
+    # x = re.findall(pattern, string)
+    # if len(sub_string) == len(x):
+    #     return 1
+    # elif len(sub_string) > len(x):
+    #     return 0
+    # else:
+    #     return len(x) % len(sub_string)
+    
+# print(5 % 3)
     # if len(x) - len(pattern) == 0:
     #     print(len(x), len(pattern))
     # else:

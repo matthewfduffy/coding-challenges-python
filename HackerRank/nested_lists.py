@@ -34,11 +34,32 @@
     
     Sample Output:  Berry
                     Harry
-"""
-for _ in range(int(raw_input())):   # base
-    scores = []
-    name = raw_input()              # base
-    score = float(raw_input())      # base
-    scores.append(score)
+    
+    Explanation:
+    There are 5 students in this class whose names and grades are assembled to build the following list:
 
-sco
+    python students = [['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], ['Akriti', 41], ['Harsh', 39]]
+
+    The lowest grade of 37.2 belongs to Tina. The second lowest grade of 37.21 belongs to both Harry and Berry, so we order their names alphabetically and print each name on a new line.
+"""
+if __name__ == '__main__':
+    name_list = []
+    score_list = []
+
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+
+        name_list.append(name)
+        score_list.append(score)
+
+    records = list(zip(name_list, score_list))
+    records_sorted = sorted(records, key=lambda x: x[0])
+
+    record_scores = [x[1] for x in records]
+    sorted_record_scores = sorted(list(set(record_scores)))
+    second_lowest = sorted_record_scores[1]
+
+    for n,s in records_sorted:
+        if s == second_lowest:
+         print(n)
