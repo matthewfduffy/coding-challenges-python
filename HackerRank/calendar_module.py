@@ -21,3 +21,18 @@ for i in range(len(prompt)):
 day_num = calendar.weekday(int(date_to_convert[2]), int(date_to_convert[0]), int(date_to_convert[1]))
     
 print(days[day_num])
+
+
+# Option 2
+import calendar
+prompt = input()
+
+def find_day(date):
+    month, day, year = (int(i) for i in date.split(' '))
+    day_number = calendar.weekday(year, month, day)
+
+    days = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY']
+
+    return days[day_number]
+
+print(find_day(prompt))
