@@ -9,7 +9,7 @@ Examples
 count_by(1,10) #should return [1,2,3,4,5,6,7,8,9,10]
 count_by(2,5) #should return [2,4,6,8,10]
 """
-
+# Option 1
 def count_by(x, n):
     return_array = [x]
     for i in range(n-1):
@@ -17,6 +17,14 @@ def count_by(x, n):
     return return_array
 
 
+
+# Option 2
+def count_by(x, n):
+    return [x * i for i in range(1, n + 1)]
+    # OR
+    return list(range(x, x * n + 1, x))
+
+
+
 print(count_by(1,10))
 print(count_by(2,5))
-    
