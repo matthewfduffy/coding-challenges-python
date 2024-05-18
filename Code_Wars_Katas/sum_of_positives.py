@@ -9,7 +9,13 @@ def positive_sum(arr):
     return sum([x for x in arr if x > 0])
 
 
+# Option 2
+# def positive_sum(arr):
+#     return sum(filter(lambda x: x > 0,arr))
 
+# Option 3
+# def positive_sum(arr):
+#     return sum(map(lambda x: x if x > 0 else 0, arr))
 
 test_a = [1, -4, 7, 12]
 test_b = []
