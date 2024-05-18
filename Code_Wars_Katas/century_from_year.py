@@ -29,7 +29,31 @@ def century(year):
             return int(year_to_string[:2]) + 1
 
 
+# Alternate Options
+# Option 1
+def century(year):
+    return (year + 99) // 100
 
+# Option 2
+import math
+
+def century(year):
+    return math.ceil(year / 100)
+
+# Option 3
+def century(year):
+    if year%100==0:
+        return year//100
+    else:
+        return year//100+1
+
+# Option 4
+def century(year):
+    return (year / 100) if year % 100 == 0 else year // 100 + 1
+
+# Option 5
+def century(year):
+    return (year - 1) // 100 + 1
 
 
 # Test
