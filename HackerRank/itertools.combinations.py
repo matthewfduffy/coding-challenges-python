@@ -42,13 +42,16 @@ CH
 CK
 HK
 """
-from itertools import combinations
+from itertools import combinations, chain
 
 def combination_finder(x, y):
     # print(list(combinations(x, y)))
-    array = list(combinations(x, y))
+    array = list(sorted((combinations(x, y))))
+    # array2 = chain.from_iterable(x)
+    print(array)
+    # print(array2)
     for letter in range(len(x)):
-        print(x)
+        print(letter)
         letter += 1
     for combo in array:
         print(combo)

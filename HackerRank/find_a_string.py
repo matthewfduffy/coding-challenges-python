@@ -5,6 +5,9 @@
 #       [Input_2] CDC
 #       [Output]    2
 
+"""
+NOT COMPLETE
+"""
 import re
 
 def count_substring(string1, sub_string1):
