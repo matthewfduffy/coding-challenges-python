@@ -8,7 +8,7 @@
 #
 # Use in conjunction with 'Schedule a .bat file' 
 
-import awmpy
+#import awmpy
 import os
 import sys
 from pathlib import Path
@@ -52,3 +52,40 @@ def create_bat_script(python_script):
 
     print(f".bat script created at: {bat.script.absolute()}")
     return bat_script
+
+
+
+
+# Schedule a .bat file
+# This will create a Windows scheduled task for a given .bat file
+#
+# HOW TO USE:
+# 1. Run this snippet in Jupyter
+# 2. When prompted, select your .bat file
+# 3. A Windows scheduled task will be created and the Task Scheduler will open up
+# 4. Right-click the newly created schedule task, and select 'Properties', then select the 'Triggers' tab
+# 5. Adjust the trigges to suit your scheduling needs
+#
+
+import os
+import subprocess
+from pathlib import Path
+
+
+def create_scheduled_task(task_name, bat_script):
+    bat_script = Path(bat_script)
+
+    # Ensure a .bat file is specified and the file exists
+    assert bat_script.suffix == ".bat", "Unsupported script type, please select a .bat file."
+    assert bat_script.is_file(), ".bat script does not exist."
+
+    # Create the scheduled task
+    create_task_command = [
+        'schtasks', '/Create', '/SC', 'ONCE', '/TN', task_name, '/TR', str(bat_script.absolute()), '/ST', '00:00'
+    ]
+    subprocess.run(create_task_command, check=True)
+
+    # Open the Task Scheduler to edit the triggers
+    os.system("taskschd.msc /s")
+
+    print(f"Task '{task_name}' created, please update the triggers based on scheduling needs.")
