@@ -1,3 +1,7 @@
+"""
+NOT COMPLETE
+"""
+
 def print_formatted(number):
     counter = 1
     width = len(bin(number)[2:])
